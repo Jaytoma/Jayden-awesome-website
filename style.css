@@ -5,7 +5,7 @@ html {
     padding: 0;
     height: 100%;
     /* The Font Family- Really important!! */
-    font-family: Arial, sans-serif;
+    font-family: arial, sans-serif;
     box-sizing: border-box;
     background-color: rgb(175 43 191);
 }
@@ -31,8 +31,11 @@ img {
 
 /* BIG text styling for the hero section text */
 .hero-text {
-    font-size: 4em;
+    font-size: 3px;
     font-weight: bold;
+    a {
+        color: transparent;
+    }
 }
 
 /* nice big font on a banner style background */
@@ -41,6 +44,10 @@ img {
     font-size: 2em;
     padding: 0.1em 3em;
     background-color: rgb(45, 101, 180);
+    a {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+    }
 }
 
 /* Three column grid with a nice big gap */
@@ -96,4 +103,8 @@ img {
     color: white;
     text-align: right;
     padding: 3em 3em;
+    a {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+    }
 }
