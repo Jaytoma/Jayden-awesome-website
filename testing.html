@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PyScript Input Demo</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+</head>
+<body style="font-family: sans-serif; margin: 40px;">
+
+    <h2>PyScript Input Example</h2>
+    
+    <label for="user-name">Enter your name:</label>
+    <input type="text" id="user-name" placeholder="Type something...">
+    
+    <button id="submit-btn" py-click="greet_user">Greet Me!</button>
+
+    <hr>
+
+    <h3>Output:</h3>
+    <div id="output-box" style="font-weight: bold; color: green;"></div>
+
+    <script type="py">
+        # Import the 'document' object to interact with HTML elements
+        from pyscript import document
+
+        def greet_user(event):
+            # Grab the input element by its ID
+            input_element = document.querySelector("#user-name")
+            
+            # Extract the text value from the input
+            user_input = input_element.value
+            
+            # Grab the output div where we want to display the message
+            output_element = document.querySelector("#output-box")
+            
+            # Formulate the response and inject it into the HTML
+            if user_input.strip() == "":
+                output_element.innerText = "Please type a name first!"
+            else:
+                output_element.innerText = f"Hello, {user_input}! This message was processed entirely in Python."
+    </script>
+
+</body>
+</html>
